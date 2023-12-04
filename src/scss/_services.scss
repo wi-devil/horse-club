@@ -1,0 +1,55 @@
+.services {
+  background: url(../img/pattern.jpg) left 50% top 50% / cover no-repeat fixed;
+}
+
+.services__title {
+  &::after {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.services__subtitle {
+  color: $accent-color;
+}
+
+.services__card {
+  background-color: $white-color;
+  box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.services__card-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.services__card-body {
+  padding: 30px 15px;
+}
+
+.services__card-title {
+  position: relative;
+  margin-bottom: 40px;
+  font-size: 20px;
+  color: $text-main;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 2px;
+    background-color: $accent-color;
+  }
+}
+
+@media (max-width: 992px) {
+  .services__card-wrapper {
+    max-width: 560px;
+  }
+}

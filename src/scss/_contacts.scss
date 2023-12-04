@@ -1,0 +1,43 @@
+.contacts {
+  background: url(../img/pattern.jpg) left 50% top 50% / cover no-repeat fixed;
+}
+
+.contacts__container {
+  display: flex;
+}
+
+.contacts__icon {
+  font-size: 18px;
+  color: $accent-color;
+
+  &:hover {
+    color: $btn-hover;
+    svg {
+      path {
+        fill: $btn-hover;
+      }
+    }
+  }
+}
+
+.contacts__social-media {
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contacts__container {
+    flex-direction: column-reverse;
+  }
+
+  .contacts__title {
+    text-align: center;
+
+    &::after {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
